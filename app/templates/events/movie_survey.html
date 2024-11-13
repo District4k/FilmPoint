@@ -1,0 +1,26 @@
+{% extends 'events/base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <div>
+    <div class="movie-container">
+        <div class="container mt-5">
+        <form method="POST">
+            {% csrf_token %}
+            <h2>{{ question_title }}</h2>
+            {% for question in questions %}
+                <input type="hidden" name="question" value="{{ question.id }}">
+                <div class="d-grid gap-lg-2">
+                    <button class="btn btn-light btn-lg" type="submit" name="answer"
+                            value="{{ question.filter }}">{{ question }}</button>
+                </div>
+            {% endfor %}
+        </form>
+    </div>
+    </div>
+{% endblock %}
+
+
+
+

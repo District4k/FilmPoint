@@ -1,0 +1,33 @@
+{% extends 'events/base.html' %}
+{% load static %}
+{% block title %}FilmPoint Survey{% endblock %}
+
+{% block content %}
+    
+<h1 class="text-center">This is FilmPoint</h1>
+
+    
+    {% if user.is_authenticated %}
+
+        <div class="movie-container">
+            <div style="text-align: center;">
+    
+
+                <button type="button" class="btn btn-custom btn-lg" onclick="location.href='/survey'">
+                <img src="{% static '/film-point/filmpoint_logo_light.png' %}" alt="FilmPoint logo" width="100" height="100">Let us entertain
+                    you!</button>
+            </div>
+        </div>
+
+    {% else %}
+        <div>
+            <p class="text-center"> To continue, please log in or register! </p>
+        </div>
+
+    {% endif %}
+
+
+
+
+{% endblock %}
+

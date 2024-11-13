@@ -1,0 +1,18 @@
+{% extends 'events/base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="movie-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                    <div class="card-body">
+                        <h2>Personal information</h2>
+                        <p><strong>Name:</strong> {{ user.username }}</p>
+                        <p><strong>Email:</strong> {{ user.email }}</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

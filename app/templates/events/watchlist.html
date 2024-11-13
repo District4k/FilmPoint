@@ -1,0 +1,56 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Here's your Watchlist</h1>
+
+
+    <div class="movies-list">
+        {% if movies %}
+            {% for movie in movies %}
+                <div class="movie-container">
+                    <div class="movie-content">
+                        <div class="image-box">
+                            <img src="https://image.tmdb.org/t/p/w500{{ movie.image }}" alt="{{ movie.name }}"
+                                 class="movie-image">
+                        </div>
+                        <div class="description-box">
+                            <div class="movie-details">
+                                <h2 class="movie-title">{{ movie.name }}</h2>
+                                <div class="movie-year">Year: {{ movie.year }}</div>
+                                <div class="movie-rating">Rating: {{ movie.rating }}</div>
+                                <div class="movie-genre">Genres: {{ movie.genre }}</div>
+                                <p class="movie-description">{{ movie.description }}</p>
+
+                                <div class="buttons">
+                                    <form id="watchlistForm-{{ movie.movie_id }}" method="POST"
+                                          action="{% url 'delete_from_watchlist' %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="movie_id" value="{{ movie.movie_id }}">
+                                        <button class="btn-custom" id="watchlistButton-{{ movie.movie_id }}"
+                                                type="submit">
+                                            Delete from Watching List
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="movie-container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h2 class="movie-title">Your watchlist is empty</h2>
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+    </div>
+{% endblock %}
+
+              
