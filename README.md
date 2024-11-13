@@ -2,7 +2,7 @@
 
 Filmpoint is a simple website for movie recommendation system for users.
 
-![Filmpoint image](app/film-point/Filmpoint.png)
+![Filmpoint image](Filmpoint.png)
 
 Filmpoint takes the user to survey where questions are saved to database what forwards the answers to api to recommend
 user movies.

@@ -1,0 +1,9 @@
+# Environments
+app/film-point/.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.idea/
