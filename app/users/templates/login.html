@@ -1,0 +1,32 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Login here!</h2>
+                        <form method="POST" class="form-group">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn-custom me-2 w-100 position-relative">
+                                <span class="position-absolute top-50 start-50 translate-middle">Login</span>
+                            </button>
+                        </form>
+
+                        <div class="text-center">
+                            <br><a href="{% url 'signup' %}">Don't have an account? Sign Up Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

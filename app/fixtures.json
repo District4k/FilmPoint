@@ -1,0 +1,182 @@
+[
+  {
+    "model": "events.surveyquestion",
+    "pk": 1,
+    "fields": {
+      "title": "If movies were food, which flavor are you craving tonight?",
+      "question": "Action - Spicy and thrilling!",
+      "filter": "action",
+      "stage": 1
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 2,
+    "fields": {
+      "title": "If movies were food, which flavor are you craving tonight?",
+      "question": "Comedy - Sweet and delightful!",
+      "filter": "comedy",
+      "stage": 1
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 3,
+    "fields": {
+      "title": "If movies were food, which flavor are you craving tonight?",
+      "question": "Drama - Rich and full-bodied!",
+      "filter": "drama",
+      "stage": 1
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 4,
+    "fields": {
+      "title": "If movies were food, which flavor are you craving tonight?",
+      "question": "Horror - Bitter and bone-chilling!",
+      "filter": "horror",
+      "stage": 1
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 5,
+    "fields": {
+      "title": "If movies were food, which flavor are you craving tonight?",
+      "question": "Romance - Sweet with a hint of spice!",
+      "filter": "romance",
+      "stage": 1
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 6,
+    "fields": {
+      "title": "If movies were food, which flavor are you craving tonight?",
+      "question": "Sci-Fi - Zesty and out-of-this-world!",
+      "filter": "scifi",
+      "stage": 1
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 7,
+    "fields": {
+      "title": "Which era of movie magic tickles your fancy?",
+      "question": "1920s - silent spice",
+      "filter": "1920-1950",
+      "stage": 2
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 8,
+    "fields": {
+      "title": "Which era of movie magic tickles your fancy?",
+      "question": "1950-1979 - golden oldies",
+      "filter": "1950-1979",
+      "stage": 2
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 9,
+    "fields": {
+      "title": "Which era of movie magic tickles your fancy?",
+      "question": "1980-1989 - cult classics",
+      "filter": "1980-1989",
+      "stage": 2
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 10,
+    "fields": {
+      "title": "Which era of movie magic tickles your fancy?",
+      "question": "1990-1999 - nostalgic hits",
+      "filter": "1990-1999",
+      "stage": 2
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 11,
+    "fields": {
+      "title": "Which era of movie magic tickles your fancy?",
+      "question": "2000-2019 - millennial magic",
+      "filter": "2000-2019",
+      "stage": 2
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 12,
+    "fields": {
+      "title": "Which era of movie magic tickles your fancy?",
+      "question": "2020+ - modern marvels",
+      "filter": "2020-2024",
+      "stage": 2
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 13,
+    "fields": {
+      "title": "Which film industry produces your favorite cinematic gems?",
+      "question": "Hollywood and its many USA buddies",
+      "filter": "us",
+      "stage": 3
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 14,
+    "fields": {
+      "title": "Which film industry produces your favorite cinematic gems?",
+      "question": "Bollywood (India)",
+      "filter": "india",
+      "stage": 3
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 15,
+    "fields": {
+      "title": "Which film industry produces your favorite cinematic gems?",
+      "question": "European Studios",
+      "filter": "europe",
+      "stage": 3
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 16,
+    "fields": {
+      "title": "Which film industry produces your favorite cinematic gems?",
+      "question": "Asian Studios (excluding Bollywood)",
+      "filter": "asia",
+      "stage": 3
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 17,
+    "fields": {
+      "title": "Which film industry produces your favorite cinematic gems?",
+      "question": "Latin American Studios",
+      "filter": "latam",
+      "stage": 3
+    }
+  },
+  {
+    "model": "events.surveyquestion",
+    "pk": 18,
+    "fields": {
+      "title": "Which film industry produces your favorite cinematic gems?",
+      "question": "I don't care, as long as it's good!",
+      "filter": "none",
+      "stage": 3
+    }
+  }
+]

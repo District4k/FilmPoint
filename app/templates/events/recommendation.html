@@ -1,0 +1,67 @@
+{% extends 'events/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+   <br> <h1>Bravo, Movie Maestro!🍿</h1>
+    <h2>Check out these awesome movie picks for tonight</h2>
+
+    {% for movie in recommended_movies %}
+        <div class="movie-container">
+            <div class="movie-content">
+                <div class="image-box">
+                    <img src="https://image.tmdb.org/t/p/w500{{ movie.image }}" alt="{{ movie.name }}" class="movie-image">
+                </div>
+                <div class="description-box">
+                    <div class="movie-details">
+                        <h2 class="movie-title">{{ movie.name }}</h2>
+                        <div class="movie-year">Year: {{ movie.year }}</div>
+                        <div class="movie-rating">Rating: {{ movie.rating }}</div>
+                        <div class="movie-genre">Genres: {{ movie.genre }}</div>
+                        <p class="movie-description">{{ movie.description }}</p>
+
+                        <div class="buttons">
+                            {% if movie.isWatchListed %}
+                                <img src="/static/film-point/star.png" style="width: 25px; height: 25px;" alt="Watchlisted"> Added to Watchlist
+                            {% else %}
+                                <form id="watchlistForm-{{ movie.movie_id }}" method="POST" action="{% url 'add_to_watchlist' %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="movie_id" value="{{ movie.movie_id }}">
+                                    <input type="hidden" name="movie_name" value="{{ movie.name }}">
+                                    <input type="hidden" name="movie_image" value="{{ movie.image }}">
+                                    <input type="hidden" name="movie_year" value="{{ movie.year }}">
+                                    <input type="hidden" name="movie_rating" value="{{ movie.rating }}">
+                                    <input type="hidden" name="movie_description" value="{{ movie.description }}">
+                                    <input type="hidden" name="movie_genre" value="{{ movie.genre }}">
+                                    <button class="btn-custom" id="watchlistButton-{{ movie.movie_id }}" type="button" onclick="addToWatchlist({{ movie.movie_id }})">
+                                        Add to Watchlist
+                                    </button>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        function addToWatchlist(movie_id) {
+            const form = $(`#watchlistForm-${movie_id}`);
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function (response) {
+                    if (response.status === 'added') {
+                        $(`#watchlistButton-${movie_id}`).replaceWith('<div><img src="/static/film-point/star.png" style="width: 25px; height: 25px;" alt="Watchlisted"> Added to Watchlist</div>');
+                    }
+                },
+                error: function () {
+                    alert('An error occurred. Please try again.');
+                }
+            });
+        }
+    </script>
+{% endblock %}

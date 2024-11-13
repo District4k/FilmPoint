@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px 0 0;
+    background-color: #E8F2F1;
+    text-align: left;
+  }
+
+.show-on-top {
+    z-index: 1; /* Set a higher z-index than the masked element - for TMDB logo */
+}
+
+h1 {
+    color: #0d253f;
+    text-align: center;
+    padding-top: 50px; /* Space above */
+    padding-bottom: 20px; /* Space below */
+}
+
+h2 {
+    color: #0d253f;
+    text-align: center;
+    padding-top: 20px; /* Space above */
+    padding-bottom: 20px; /* Space below */
+}
+
+.movie-container {
+    padding: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #E8F2F1;
+}
+
+.movie-content { /* of movie.container */
+    font-size: 16px; /* all fonts in movie.container */
+    display: flex;
+    gap: 80px; /*between movie.image and movie.details*/
+}
+
+.movie-description { /* only description text in movie.container*/
+    margin-top: 10px;
+    font-size: 18px;
+    color: #051b33;
+    align-content: center;
+    line-height: 1.5;
+}
+
+.movie-image {
+    height: 300px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-title {
+    margin-top: 0;
+    color: #0D253F;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* elements with the class “movie-details” will participate in flexible layout behavior, adjusting their size based on available space.*/
+.movie-details {
+    margin-bottom: 10px;
+    flex: 1;
+} /* the element will grow and shrink to occupy available space within its container - value 1 indicates that it should take up an equal share of available space along the main axis (usually horizontal).*/
+
+.movie-year,
+.movie-rating,
+.movie-genre {
+    color: #051b33;
+    margin-top: 1px;
+    font-size: 1em;
+    margin-bottom: 1px;
+}
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.custom-navbar {
+    background-color: #E8F2F1;
+    width: auto;
+    height: 50px;
+    padding-left: 100px; /* Adjust as needed */
+    padding-right: 100px; /* Adjust as needed */
+}
+
+.custom-card {
+    background-color: #f9f9f9;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.TMDB-logo-container {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 1px;
+    right: 20px; /* Adjust the right position */
+}
+
+.btn-custom {
+    background-color: #0d253f;
+    color: #fff;
+    border: none;
+    padding: 20px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #d2dfe5;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #E8F2F1;
+    text-align: center;
+}
