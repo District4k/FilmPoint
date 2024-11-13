@@ -1,4 +1,4 @@
-## FilmPoint
+# FilmPoint
 
 Filmpoint is a simple website for movie recommendation system for users.
 
