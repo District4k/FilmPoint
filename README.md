@@ -1,4 +1,4 @@
-# FilmPoint
+<h1 align="center">FilmPoint</h1>
 
 Filmpoint is a simple website for movie recommendation system for users.
 
