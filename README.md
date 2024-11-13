@@ -29,7 +29,7 @@ user movies.
 
 for MySQL:
 
-      SECRET_KEY='django-insecure-s@xw=y+b7o@a4uk935bho9#(6k&9d96r*o^zbo9j4%abt2xhg9'
+      SECRET_KEY=''
       DEBUG='True'
       DB_ENGINE='django.db.backends.mysql'
       DB_NAME='(database_name)'
@@ -40,7 +40,7 @@ for MySQL:
 
 for PostgreSQL:
 
-      SECRET_KEY='django-insecure-s@xw=y+b7o@a4uk935bho9#(6k&9d96r*o^zbo9j4%abt2xhg9'
+      SECRET_KEY=''
       DEBUG='True'
       DB_ENGINE='django.db.backends.postgresql'
       DB_NAME='(database_name)'
