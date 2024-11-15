@@ -127,3 +127,32 @@ footer {
     background-color: #E8F2F1;
     text-align: center;
 }
+
+/* Button hover effect */
+.nav-link:hover {
+    transform: scale(1.1); /* Slightly increase the size of the button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow to create a pop-up effect */
+}
+
+/* Spark effect styling */
+.spark {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* White color for the spark */
+    border-radius: 50%;
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+    animation: sparkAnimation 0.5s ease-out; /* Apply the spark animation */
+}
+
+/* Keyframes for the spark animation */
+@keyframes sparkAnimation {
+    0% {
+        transform: scale(1); /* Start with normal size */
+        opacity: 1; /* Fully visible at the start */
+    }
+    100% {
+        transform: scale(5); /* Grow the spark */
+        opacity: 0; /* Fade out */
+    }
+}
